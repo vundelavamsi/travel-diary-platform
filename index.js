@@ -101,6 +101,7 @@ app.get("/users", async (req, res) => {
 app.post("/diary", async (req, res) => {
   try {
     const { userId, title, description, date, location, photos } = req.body;
+    console.log(userId,title,description,date,location,photos);
     const result = await diaryEntry.create(
       userId,
       title,
@@ -132,6 +133,7 @@ app.get("/diary-entries", async(req,res) => {
 app.put("/diary/:id", async (req, res) => {
   try {
     const { id } = req.params;
+    console.log(id);
     const { title, description, date, location, photos } = req.body;
     const result = await diaryEntry.update(
       id,

@@ -20,3 +20,33 @@ GET http://localhost:3000/users
 ###
 
 GET http://localhost:3000/diary-entries
+###
+
+POST http://localhost:3000/diary
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcxMzA3MTA0OX0.3FOEtXFUnooGxUwFJ8vINnS3bKLkD-XRLUVOQA9pwPU
+Content-Type: application/json
+
+{
+    "userId": 2,
+    "title": "My first diary entry",
+    "description": "This is my first diary entry",
+    "date": "2021-01-01",
+    "location": "Hyderabad",
+    "photos": "charminar.png"
+}
+###
+
+PUT http://localhost:3000/diary/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcxMzA3MTA0OX0.3FOEtXFUnooGxUwFJ8vINnS3bKLkD-XRLUVOQA9pwPU
+Content-Type: application/json
+
+{
+    "title": "My first diary entry",
+    "description": "This is my first diary entry in this trip",
+    "date": "2021-01-01",
+    "location": "Hyderabad",
+    "photos": "charminar.png"
+}
+###
+
+DELETE http://localhost:3000/diary/5

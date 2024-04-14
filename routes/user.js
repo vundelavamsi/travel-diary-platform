@@ -33,7 +33,7 @@ class User {
       if (!passwordMatch) {
         throw new Error("Invalid username or password");
       }
-      const token = jwt.sign({ userId: user.id }, process.env.SECRET_KEY);
+      const token = jwt.sign({ userId: user.id }, "MY_SECRET_KEY");
       return { token };
     } catch (error) {
       console.error("Error logging in:", error);

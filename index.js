@@ -7,8 +7,8 @@ const cors = require("cors");
 const jwt = require("jsonwebtoken");
 
 //Importing Classes
-const User = require("./user.js");
-const DiaryEntry = require("./diaryEntry.js");
+const User = require("./routes/user.js");
+const DiaryEntry = require("./routes/diaryEntry.js");
 
 const app = express();
 
